@@ -1,1 +1,42 @@
-
+{
+  "name": "Minecraft AI Environment",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {},
+    "ghcr.io/devcontainers/features/gui-software:1": {},
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true
+      }
+    }
+  },
+  "postCreateCommand": "bash scripts/setup.sh",
+  "forwardPorts": [5900, 6080, 8888],
+  "portsAttributes": {
+    "5900": {
+      "label": "VNC Desktop",
+      "onAutoForward": "notify"
+    },
+    "6080": {
+      "label": "Web VNC",
+      "onAutoForward": "notify"
+    },
+    "8888": {
+      "label": "Jupyter Notebook",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteUser": "vscode"
+}
