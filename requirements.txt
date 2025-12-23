@@ -1,1 +1,38 @@
 
+# Core dependencies
+numpy==1.24.3
+opencv-python==4.8.1.78
+Pillow==10.1.0
+pyautogui==0.9.54
+mss==9.0.1
+pynput==1.7.6
+keyboard==0.13.5
+
+# AI/ML
+ultralytics==8.0.196
+torch==2.1.0
+torchvision==0.16.0
+torchaudio==2.1.0
+scikit-learn==1.3.2
+pandas==2.1.4
+matplotlib==3.8.2
+
+# Cloud/Remote
+streamlit==1.28.1
+flask==3.0.0
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+websockets==12.0
+pyngrok==7.0.0
+
+# Utilities
+pytest==7.4.3
+black==23.11.0
+ruff==0.1.6
+jupyter==1.0.0
+notebook==7.0.6
+ipywidgets==8.1.1
+
+# Minecraft specific
+minerl==0.4.7
+gym==0.26.2
